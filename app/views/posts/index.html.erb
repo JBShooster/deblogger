@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Posts</h1>
+
+<%= link_to 'New Post', new_post_path %>
+
+<% @posts.each do |post| %>
+<h2><%= link_to post.title, post %> by <%= link_to post.author.full_name, post.author %> - <%= time_ago_in_words post.created_at %> ago, categorized as: <%= post.category %></h2>
+<% end %>

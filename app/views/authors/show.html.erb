@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+
+<h2><%= @author.full_name %> - <%= @author.age %></h2>
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Destroy', @author, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Posts', posts_path %>
+
+<%= link_to 'Back', authors_path %>
